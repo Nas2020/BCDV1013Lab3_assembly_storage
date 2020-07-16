@@ -10,8 +10,8 @@ contract Storage {
  let data := sload(bytes4data_slot)
  output1  := shl(224,and(data,0xffffffff))
  output2  := shr(shl(3,uintdata_offset), data)
- output3 := shr(104,data)
- output4 := sload(addrdata_slot)
+ output3  := shr(shl(3,booldata_offset), data)
+ output4  := sload(addrdata_slot)
          }
     }
 }
